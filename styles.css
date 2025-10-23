@@ -224,9 +224,7 @@ main section.container {
 
 .card-list li {
     flex: 1 1 calc(25% - 1rem);
-    /* 3 columns created by baseline value */
     min-width: 240px;
-    /* min-width: 240px; */
     background: #FFFFFF;
     border: 1px solid #DDDDDD;
     border-radius: 12px;
