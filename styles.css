@@ -1,0 +1,134 @@
+/* =========================
+   Reset / Base
+   ========================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    /* STEP 5: Add your base font family, font size, line height, 
+     text color, and background color here */
+}
+
+/* =========================
+   Layout Utilities
+   ========================= */
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* =========================
+   Typography
+   ========================= */
+h1,
+h2,
+h3 {
+    /* STEP 5: Add your heading font family, sizes, and colors here */
+}
+
+/* =========================
+   Navigation (STEP 2)
+   ========================= */
+.site-nav {
+    /* STEP 2: Full-width background and border */
+}
+
+.nav-inner {
+    /* STEP 2: Flexbox row — brand left, links right */
+}
+
+.nav-links {
+    /* STEP 2: Flexbox row for nav items */
+}
+
+.nav-links a {
+    /* STEP 2: Add hover/focus states */
+}
+
+/* =========================
+   Hero Section (STEP 3A)
+   ========================= */
+#hero {
+    /* STEP 3A: Background image, height, flex centering */
+}
+
+#hero .overlay {
+    /* STEP 3A: Dark overlay for readability */
+}
+
+#hero h1,
+#hero p,
+#hero a {
+    /* STEP 3A: Style hero text and button */
+}
+
+/* =========================
+   Why Choose Us (STEP 3B)
+   ========================= */
+.feature-list {
+    /* STEP 3B: Flexbox row, wrapping */
+}
+
+.feature-card {
+    /* STEP 3B: Borders, padding, spacing */
+}
+
+/* =========================
+   Services (STEP 3C)
+   ========================= */
+.card-list {
+    /* STEP 3C: Flexbox 2-column layout */
+}
+
+.card-list li {
+    /* STEP 3C: Card styles, hover effect */
+}
+
+/* =========================
+   Reviews (STEP 6)
+   ========================= */
+.reviews-grid {
+    /* STEP 6: Flexbox grid 3x2 */
+}
+
+.reviews-grid li {
+    /* STEP 6: Card styles, drop shadow */
+}
+
+blockquote {
+    /* STEP 6: Left border, italic style */
+}
+
+cite {
+    /* STEP 6: Smaller cite text */
+}
+
+/* =========================
+   CTA Band (STEP 7)
+   ========================= */
+.cta-band {
+    /* STEP 7: Gradient background, centered text */
+}
+
+.cta-band h2,
+.cta-band p {
+    /* STEP 7: White text for readability */
+}
+
+/* =========================
+   Footer (STEP 4)
+   ========================= */
+.site-footer {
+    /* STEP 4: Top border, centered muted text */
+}
