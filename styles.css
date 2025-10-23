@@ -15,120 +15,323 @@ body {
 }
 
 body {
-    /* STEP 5: Add your base font family, font size, line height, 
-     text color, and background color here */
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #2C3E50;
+    background: #F9F9F9;
 }
 
-/* =========================
-   Layout Utilities
-   ========================= */
+/* Reusable container with gutters */
 .container {
     max-width: 1120px;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
-/* =========================
-   Typography
-   ========================= */
+/* Headings */
 h1,
 h2,
 h3 {
-    /* STEP 5: Add your heading font family, sizes, and colors here */
+    font-family: 'Montserrat', sans-serif;
+    color: #2C3E50;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.15rem;
+}
+
+/* Paragraphs and helper */
+.section-intro {
+    color: #666666;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+    max-width: 65ch;
+}
+
+/* Space sections consistently */
+main section.container {
+    margin: 3rem auto;
+    /* more vertical margin */
+    padding: 3rem 1.5rem;
+    /* more inner padding */
 }
 
 /* =========================
-   Navigation (STEP 2)
+   Navigation
    ========================= */
 .site-nav {
-    /* STEP 2: Full-width background and border */
+    width: 100%;
+    background: #FFFFFF;
+    border-bottom: 1px solid #DDDDDD;
 }
 
 .nav-inner {
-    /* STEP 2: Flexbox row — brand left, links right */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 64px;
+    padding: 0.5rem 0;
+}
+
+.brand {
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    color: #2C3E50;
 }
 
 .nav-links {
-    /* STEP 2: Flexbox row for nav items */
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
 }
 
 .nav-links a {
-    /* STEP 2: Add hover/focus states */
+    text-decoration: none;
+    color: #2C3E50;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+}
+
+.nav-links a:hover {
+    color: #3498DB;
+}
+
+.nav-cta {
+    border: 1px solid #3498DB;
+    border-radius: 6px;
+    padding: 0.35rem 0.6rem;
 }
 
 /* =========================
-   Hero Section (STEP 3A)
+   Hero
    ========================= */
 #hero {
-    /* STEP 3A: Background image, height, flex centering */
+    background: url('https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+    position: relative;
+    color: #FFFFFF;
+    min-height: 78vh;
+    display: flex;
+    align-items: stretch;
 }
 
 #hero .overlay {
-    /* STEP 3A: Dark overlay for readability */
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
 }
 
-#hero h1,
-#hero p,
-#hero a {
-    /* STEP 3A: Style hero text and button */
+#hero h1 {
+    margin-bottom: 0.75rem;
+    color: #ccc
+}
+
+#hero p {
+    margin-bottom: 1.25rem;
+    max-width: 56ch;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #E67E22;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background: #cf6916;
+}
+
+.btn-light {
+    background: #FFFFFF;
+    color: #2C3E50;
+    border: 1px solid #DDDDDD;
+}
+
+.btn-light:hover {
+    background: #F0F0F0;
 }
 
 /* =========================
-   Why Choose Us (STEP 3B)
+   Why Choose Us (Flexbox)
    ========================= */
+#why {
+    background: #FFFFFF;
+}
+
 .feature-list {
-    /* STEP 3B: Flexbox row, wrapping */
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0;
 }
 
 .feature-card {
-    /* STEP 3B: Borders, padding, spacing */
+    flex: 1 1 30%;
+    /* 3 columns created by baseline value */
+    max-width: 33.333%;
+    min-width: 220px;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.feature-card h3 {
+    margin-bottom: 0.35rem;
+}
+
+.feature-card p {
+    color: #666666;
+    line-height: 1.55;
 }
 
 /* =========================
-   Services (STEP 3C)
+   Services (Flexbox)
    ========================= */
 .card-list {
-    /* STEP 3C: Flexbox 2-column layout */
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-top: 1rem;
+    padding: 0;
 }
 
 .card-list li {
-    /* STEP 3C: Card styles, hover effect */
+    flex: 1 1 calc(25% - 1rem);
+    /* 3 columns created by baseline value */
+    min-width: 240px;
+    /* min-width: 240px; */
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-top: 4px solid transparent;
+}
+
+.card-list li:nth-child(odd) {
+    border-top-color: #3498DB;
+}
+
+.card-list li:nth-child(even) {
+    border-top-color: #E67E22;
+}
+
+.card-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* =========================
-   Reviews (STEP 6)
+   Reviews
    ========================= */
+#reviews {
+    background: #FFFFFF;
+}
+
 .reviews-grid {
-    /* STEP 6: Flexbox grid 3x2 */
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0;
 }
 
-.reviews-grid li {
-    /* STEP 6: Card styles, drop shadow */
+.reviews-grid>li {
+    flex: 1 1 calc(33.333% - 1rem);
+    /* 3 columns created by baseline value */
+    min-width: 240px;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-blockquote {
-    /* STEP 6: Left border, italic style */
+.reviews-grid>li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-cite {
-    /* STEP 6: Smaller cite text */
+.reviews-grid .quote {
+    border-left: 4px solid #3498DB;
+    padding-left: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.reviews-grid cite {
+    display: block;
+    color: #666666;
+    font-size: 0.9rem;
 }
 
 /* =========================
-   CTA Band (STEP 7)
+   CTA Band
    ========================= */
 .cta-band {
-    /* STEP 7: Gradient background, centered text */
+    background: linear-gradient(135deg, #2C3E50 0%, #3b4d63 100%);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 4rem 1.5rem;
 }
 
 .cta-band h2,
 .cta-band p {
-    /* STEP 7: White text for readability */
+    color: #FFFFFF;
 }
 
 /* =========================
-   Footer (STEP 4)
+   Footer
    ========================= */
 .site-footer {
-    /* STEP 4: Top border, centered muted text */
+    background: #FFFFFF;
+    border-top: 1px solid #DDDDDD;
+    color: #666666;
+    text-align: center;
+    padding: 1.25rem 1rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+
+    .feature-card,
+    .card-list li,
+    .reviews-grid li {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .nav-inner {
+        flex-direction: column;
+    }
 }
